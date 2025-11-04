@@ -1,0 +1,34 @@
+{
+    "name": "visernic/laravel-device-detector",
+    "description": "A Laravel wrapper for the DeviceDetector library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Md Mostafa Niloy (Visernic)",
+            "email": "mostafa@visernic.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "matomo/device-detector": "^6.0",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Visernic\\DeviceDetector\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Visernic\\DeviceDetector\\DeviceDetectorServiceProvider"
+            ],
+            "aliases": {
+                "DeviceDetector": "Visernic\\DeviceDetector\\Facades\\DeviceDetector"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
